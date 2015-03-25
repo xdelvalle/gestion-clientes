@@ -20,8 +20,8 @@ public class EnviarMail {
     public boolean sendMail(List<String> destinatarios, String imagenAdjunta, String ficheroAdjunto, String subject) {
 
 //        destinatarios.clear();
-//        destinatarios.add("xavi.delvalle@gmail.com");
-//        destinatarios.add("xavi_delvalle@hotmail.com");
+//        destinatarios.add("********@gmail.com");
+//        destinatarios.add("********@hotmail.com");
 
         List<String> list50Mails = new ArrayList<String>();
 
@@ -62,7 +62,7 @@ public class EnviarMail {
             // Puerto de gmail para envio de correos
             props.setProperty("mail.smtp.port", "587");
             // Nombre del usuario
-            props.setProperty("mail.smtp.user", "esteticaambar@gmail.com");
+            props.setProperty("mail.smtp.user", "********@gmail.com");
             // Si requiere o no usuario y password para conectarse.
             props.setProperty("mail.smtp.auth", "true");
 
@@ -89,21 +89,21 @@ public class EnviarMail {
             multiParte.addBodyPart(imagen);
 
             MimeMessage msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("esteticaambar@gmail.com"));
+            msg.setFrom(new InternetAddress("********@gmail.com"));
 
             InternetAddress[] direccionesCCO = new InternetAddress[lista50.size()];
             for (int i = 0; i < lista50.size(); i++) {
                 direccionesCCO[i] = new InternetAddress(lista50.get(i));
             }
 
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("esteticaambar@gmail.com"));
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("********@gmail.com"));
             msg.addRecipients(Message.RecipientType.BCC, direccionesCCO);
 
             msg.setSubject(subject);
             msg.setContent(multiParte);
 
             Transport t = session.getTransport("smtp");
-            t.connect("esteticaambar@gmail.com", "chorry@0611@");
+            t.connect("********@gmail.com", "********");
             t.sendMessage(msg, msg.getAllRecipients());
 
             t.close();
