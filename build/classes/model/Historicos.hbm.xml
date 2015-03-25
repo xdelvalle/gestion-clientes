@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-feb-2011 23:49:27 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="gestionclientes" name="model.Historicos" table="historicos">
+    <id name="idHistorico" type="java.lang.Integer">
+      <column name="id_historico"/>
+      <generator class="identity"/>
+    </id>
+    <property name="id" type="string">
+      <column length="5" name="id"/>
+    </property>
+    <property name="fecha" type="string">
+      <column length="10" name="fecha"/>
+    </property>
+    <property name="tratamiento" type="string">
+      <column length="250" name="tratamiento"/>
+    </property>
+    <property name="precio" type="string">
+      <column length="10" name="precio"/>
+    </property>
+    <property name="recomendaciones" type="string">
+      <column length="250" name="recomendaciones"/>
+    </property>
+    <property name="producto" type="string">
+      <column length="50" name="producto"/>
+    </property>
+  </class>
+</hibernate-mapping>

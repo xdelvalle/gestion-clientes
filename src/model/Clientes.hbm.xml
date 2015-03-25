@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-feb-2011 23:49:27 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="gestionclientes" name="model.Clientes" table="clientes">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="50" name="nombre"/>
+    </property>
+    <property name="apellido1" type="string">
+      <column length="50" name="apellido1"/>
+    </property>
+    <property name="apellido2" type="string">
+      <column length="50" name="apellido2"/>
+    </property>
+    <property name="edad" type="string">
+      <column length="10" name="edad"/>
+    </property>
+    <property name="sexo" type="string">
+      <column length="6" name="sexo"/>
+    </property>
+    <property name="direccionTipo" type="string">
+      <column length="10" name="direccionTipo"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="250" name="direccion"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="9" name="telefono"/>
+    </property>
+    <property name="movil" type="string">
+      <column length="9" name="movil"/>
+    </property>
+    <property name="email" type="string">
+      <column length="50" name="email"/>
+    </property>
+    <property name="comentarios" type="string">
+      <column length="250" name="comentarios"/>
+    </property>
+    <property name="fechaNacimiento" type="string">
+      <column length="10" name="FechaNacimiento"/>
+    </property>
+  </class>
+</hibernate-mapping>
